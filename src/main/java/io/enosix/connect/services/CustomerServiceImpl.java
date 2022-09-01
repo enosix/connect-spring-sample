@@ -31,7 +31,7 @@ public class CustomerServiceImpl implements CustomerService {
         var customerSearchRequest = new EnosixCustomerSearchRequest();
         customerSearchRequest.pagingOptions = new PagingOptions();
 
-        ResponseEntity<EnosixCustomerSearchResponse> response = restTemplate.postForEntity("/sap/SAP/EnosixCustomer/search",
+        ResponseEntity<EnosixCustomerSearchResponse> response = restTemplate.postForEntity("/api/sap/SAP/EnosixCustomer/search",
                 customerSearchRequest,
                 EnosixCustomerSearchResponse.class);
         if(!response.getStatusCode().is2xxSuccessful()) {
