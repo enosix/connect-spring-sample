@@ -30,6 +30,8 @@ public class CustomerServiceImpl implements CustomerService {
     public List<Customer> getCustomers(int pageNumber, int pageSize) {
         var customerSearchRequest = new EnosixCustomerSearchRequest();
         customerSearchRequest.pagingOptions = new PagingOptions();
+        customerSearchRequest.pagingOptions.pageNumber = pageNumber;
+        customerSearchRequest.pagingOptions.pageSize = pageSize;
 
         ResponseEntity<EnosixCustomerSearchResponse> response = restTemplate.postForEntity("/api/sap/SAP/EnosixCustomer/search",
                 customerSearchRequest,
