@@ -6,7 +6,7 @@ The Connect Spring Sample is a Spring Boot MVC application as a demonstration of
 
 ## Running the example
 The sample is built on JDK 11 using Spring Boot 2.7.3. The steps to execute the example running against your environment are:
-1. Deploy an application with the `EnosixCustomer Search` API in [enosix Connect](https://console.connect.enosix.io) using PassThrough authentication.
+1. Deploy an application with the `EnosixCustomer Search` API in [enosix Connect](https://console.connect.enosix.io) using PassThrough authentication on a connection named `SAP`.
   - Assume the url to the deployed application is https://my-deployed-app.cfapps.us10.hana.ondemand.com
 2. Configure the [application.properties](src/main/resources/application.properties) `enosix.rest` properties  
 ```
